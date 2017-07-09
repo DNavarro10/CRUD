@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD semana 6</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <div class="contenedor">
+		<div class="titulo">
+			<header>
+				<div>
+					<h1>Curso de PHP - Semana 5</h1>
+				</div>
+				<div>
+					<p>PHP y MySQL</p>
+				</div>
+			</header>
+		</div>
+		<div class="main">
+			<div class="formulario">
+				<div class="warp">
+					<form action="php/resultado.php" method="post">
+						<fieldset>
+							<legend>Formulario de operaciones</legend>
+
+							<table border="0" class="table">
+								<tr>
+									<td id="ingre">
+										<b>Ingresar valor :</b>
+									</td>
+									<td>
+										<!-- input que no permite copy paste con funcion JS para solo recibir numeros-->
+										<input type="text" name="valor" id="digito" placeholder="Digitar Valor numerico" required="required" onkeypress="return justNumbers(event);" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" min="1">
+									</td>
+								</tr>
+								<tr>
+									<td id="cpera">
+										<b>Operaci&oacute;n :</b>
+									</td>
+									<td>
+										<select name="operacion" id="ope">
+											<option value="0" selected="select">Elegir Operaci&oacute;n</option>
+											<option value="1">Cent&iacute;metros a Metros</option>
+											<option value="2">Metros a Cent&iacute;metros</option>
+											<option value="3">Metros a Kil&oacute;metros</option>
+											<option value="4">Kil&oacute;metros a Metros</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<center>
+											<input type="submit" value="Enviar" class="btn btn-primary" onclick="clearform();">
+											<input type="reset" value="Borrar" class="btn btn-secondaryn">
+										</center>
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+
+		</div>
+		<footer>
+			<div>
+				<p>
+					Diego Navarro - PHP 2017
+				</p>
+			</div>
+		</footer>
+	</div>
+	<script src="JS/validar.js"></script>
+</body>
+</html>

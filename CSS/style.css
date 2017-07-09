@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body, html{
+background: #4ECDC4;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-gradient(linear, left top, right top, from(#556270), to(#4ECDC4));
+background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.titulo {
+	margin-top: 60px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.titulo p{
+	margin-top: 20px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+header, .main,  footer{
+	width: 60%;
+	padding: 50px;
+	margin: auto;
+	background: #fdf8f1;
+	
+	-webkit-box-shadow: 2px 3px 5px;
+	box-shadow:2px 3px 5px ;
+}
+.resultado{
+
+	margin-top: 150px;
+}
+header{
+	padding-top: 50px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.main, footer{
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+.warp{
+	text-align: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;;
+	border: 2px solid;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+/*Estilo de tabla*/
+.table{
+	-ms-flex-line-pack: center;
+	align-content: center;
+	
+}
+ #digito ,#ope{
+	width: 70%;
+	padding-left: 20px;
+}
+input .button{
+	
+}
+footer{
+	display: block;
+	margin-top: 20px;
+	bottom: 0;
+}
