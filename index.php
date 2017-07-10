@@ -1,3 +1,4 @@
+<?php include ('PHP/valores.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +26,8 @@
         <div class="main">
             <div class="formulario">
                 <div class="warp">
-                    <form action="PHP/guardar.php" method="post" class="form">
+                    <form action="PHP/valores.php" method="post" class="form">
+                    
                         <fieldset>
                             <legend>Ingresar Datos</legend>
 
@@ -66,13 +68,13 @@
                                         <p>Direcc&iacute;on :</p>
                                     </td>
                                     <td>
-                                        <textarea class="fila form-control" rows="4" cols="50" placeholder="Agregar direccíon"></textarea>
+                                        <textarea class="fila form-control" name="direc" rows="4" cols="50" placeholder="Agregar direccíon"></textarea>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
                                         <center>
-                                            <input type="submit" value="Ingresar" class="btn btn-primary" onclick="clearform();">
+                                            <input type="submit" name="insertar" value="Ingresar" class="btn btn-primary" onclick="clearform();">
                                             <input type="reset" value="Limpiar" class="btn btn-secondaryn">
                                         </center>
                                     </td>
@@ -82,7 +84,15 @@
                     </form>
                 </div>
             </div>
-
+				<div class="warp">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Cedula</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
         </div>
         <footer>
             <div>

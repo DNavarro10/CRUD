@@ -1,23 +1,14 @@
 <?php
-class conexion {
-	
-	private	$localhost = '127.0.0.1';
-	private	$usuario = 'root';
-	private	$pass = 'diego';
-	private	$db = 'estudiantes';
+
 
 	
-	public function conectarDB(){
-    public $conn;
-        
-        public function __construct{
+	$localhost = '127.0.0.1';
+	$usuario = 'root';
+	$pass = '';
+	$db = 'estudiantes';
 
-            $thi -> conn = mysqli_connect('$localhost', '$usuario', '$pass','$db');
-
-            if(!$thi -> conn){
-                echo "Error in Connecting ".mysqli_connect_error();         
-            }
-        }
-    }
-}
+	
+			$conn = mysqli_connect("$localhost","$usuario","$pass") or die ("No se pudo conectar"); 
+			mysqli_select_db($conn, "estudiantes") or die ("No existe la base de datos");   
+	
 ?>
