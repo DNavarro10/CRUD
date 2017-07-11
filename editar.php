@@ -1,3 +1,4 @@
+<?php include_once("PHP/update.php");?>
 <?php include_once("PHP/asociar.php");?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@
         <div class="main">
             <div class="formulario">
                 <div class="warp">
-                    <form action="PHP/update.php" method="post" class="form">
+                    <form action="editar.php" method="post" class="form">
                    
                         <fieldset>
                             <legend>Editar datos</legend>

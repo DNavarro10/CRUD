@@ -1,13 +1,14 @@
 <?php 
 
+//including the database connection file
 include("conn.php");
  
-
-$cedula = $_POST['id'];
-
-
-$resultado = mysqli_query($mysqli, "DELETE FROM alumnos WHERE cedula=$cedula");
+//getting id of the data from url
+$id = $_GET['id'];
  
-
-header("Location: ./../index.php");
+//deleting the row from table
+$result = mysqli_query($conn, "DELETE FROM alumnos WHERE cedula=$id");
+ 
+//redirecting to the display page (index.php in our case)
+header("Location: ../index.php");
  ?>
