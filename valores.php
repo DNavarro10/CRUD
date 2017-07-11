@@ -1,8 +1,8 @@
 <?php
 
 	/*iniciar variables del form*/
-	require 'Conn/conexion.php';
-	require 'funciones.php';
+	require 'PHP/conn.php';
+	require 'PHP/funciones.php';
 
 
 			$cedula = "";
@@ -28,6 +28,7 @@
 						$insertar = "INSER INTO alumnos (cedula,nombre,primer_apellido,segun_apellido,edd,telefono,direccion) VALUES ('$cedula','$nombre','$ape_1','$ape_2','$edad','$tel','$direc',)";
 					
 						mysqli_query($conn,$insertar);
+						header('location: index.php');
 					
 			
 		}

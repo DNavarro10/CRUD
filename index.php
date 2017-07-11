@@ -1,4 +1,4 @@
-<?php include ('PHP/valores.php') ?>
+<?php include ('valores.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +26,7 @@
         <div class="main">
             <div class="formulario">
                 <div class="warp">
-                    <form action="PHP/valores.php" method="post" class="form">
+                    <form action="valores.php" method="post" class="form">
                     
                         <fieldset>
                             <legend>Ingresar Datos</legend>
@@ -84,16 +84,9 @@
                     </form>
                 </div>
             </div>
-				<div class="warp">
-					<table class="table">
-						<thead>
-							<tr>
-								<th>Cedula</th>
-							</tr>
-						</thead>
-					</table>
-				</div>
+				
         </div>
+        
         <footer>
             <div>
                 <p>
