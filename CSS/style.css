@@ -19,7 +19,7 @@ background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, F
 	font-weight: bold;
 }
 header, .main,  footer{
-	width: 70%;
+	width: 80%;
 	padding: 50px;
 	margin: auto;
 	background: #fdf8f1;

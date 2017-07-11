@@ -1,4 +1,4 @@
-<?php include ('valores.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,66 +25,42 @@
         </div>
         <div class="main">
             <div class="formulario">
+               
+       
                 <div class="warp">
-                    <form action="valores.php" method="post" class="form">
-                    
-                        <fieldset>
-                            <legend>Ingresar Datos</legend>
-
-                            <table class="table">
-                                <tr>
-                                    <td class="col"><b>Cedula :</b></td>
-                                    <td class="fila"><!-- input que no permite copy paste con funcion JS para solo recibir numeros-->
-                                        <input type="text" name="cedula" placeholder="Cedula" required="required" onkeypress="return justNumbers(event);" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" min="1" class="fila form-control "></td><!--input validado-->
-                                </tr>
-                                
-                                <tr>
-                                    <td class="col"><p>Nombre :</p></td>
-                                    <td><input type="text" name="nobre" placeholder="Nombre" required="required" class="fila form-control"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="col"><p>Primer Apellido :</p></td>
-                                    <td><input type="text" name="ape-1" placeholder="Primer apellido" required="required" class="fila form-control"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="col"><p>Segundo Apellido :</p></td>
-                                    <td><input type="text" name="ape-2" placeholder="Segundo apellido" required="required" class="fila form-control"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="col"><p>Edad :</p></td>
-                                    <td><input type="text" name="edad" placeholder="Edad" required="required" onkeypress="return justNumbers(event);" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" min="1" class="fila form-control"></td><!--input validado-->
-                                </tr>
-
-                                <tr>
-                                    <td class="col"><p>Tel&eacute;fono :</p></td>
-                                    <td><input type="text" name="tel" placeholder="Teléfono" required="required" onkeypress="return justNumbers(event);" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" min="1" class="fila form-control"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="col">
-                                        <p>Direcc&iacute;on :</p>
-                                    </td>
-                                    <td>
-                                        <textarea class="fila form-control" name="direc" rows="4" cols="50" placeholder="Agregar direccíon"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <center>
-                                            <input type="submit" name="insertar" value="Ingresar" class="btn btn-primary" onclick="clearform();">
-                                            <input type="reset" value="Limpiar" class="btn btn-secondaryn">
-                                        </center>
-                                    </td>
-                                </tr>
-                            </table>
-                        </fieldset>
-                    </form>
+                 <h2>Alumnos</h2>
+                 	<table class="table">
+                 	
+                 		<tr>
+                 			<td>Cedula</td>
+                 			<td>Nombre</td>
+                 			<td>1º Apellido</td>
+                 			<td>2º Apellido</td>
+                 			<td>Edad</td>
+                 			<td>Telefono</td>
+                 			<td>Direccion</td>
+                 		</tr>
+                 		<?php include_once("PHP/mostrar.php")?>
+                 		<?php 
+						/* llenar los campos desde la base de datos*/
+						while($mostrar = mysqli_fetch_array($resultado)) {         
+							echo "<tr>";
+							echo "<td>".$mostrar['cedula']."</td>";
+							echo "<td>".$mostrar['nombre']."</td>";
+							echo "<td>".$mostrar['primer_apellido']."</td>";
+							echo "<td>".$mostrar['segun_apellido']."</td>";    
+							echo "<td>".$mostrar['edad']."</td>";    
+							echo "<td>".$mostrar['telefono']."</td>";
+							echo "<td>".$mostrar['direccion']."</td>";    
+							echo "<td><a href=\"editar.php?id=$mostrar[cedula]\">Editar</a> | <a href=\"PHP/borrar.php?id=$mostrar[cedula]\" onClick=\"return confirm('Desea eliminar?')\">Borrar</a></td>";        
+						}
+						?>
+                 		
+                 	</table>               
                 </div>
+           		<a href='alumno.html'><button class="btn">Nuevo</button></a>
             </div>
-				
+    
         </div>
         
         <footer>
