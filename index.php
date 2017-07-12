@@ -58,7 +58,7 @@
                  		
                  	</table>               
                 </div>
-           		<a href='alumno.html'><button class="btn">Nuevo</button></a>
+           		<a href='alumno.html'><button class="btn btn-primary">Nuevo</button></a>
             </div>
     
         </div>

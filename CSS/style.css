@@ -57,7 +57,11 @@ header{
 	margin-bottom: 20px;
 	
 }
-
+/* estilo a agregar php*/
+.warp-main {
+	
+	clear: both;
+}
 /*Estilo de tabla*/
 
 .table{
